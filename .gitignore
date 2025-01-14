@@ -1,0 +1,26 @@
+*-bak
+*-backups
+*-cache*
+*-bak*
+_autosave*
+\#auto_saved_files\#
+*.kicad_pcb.lck
+*.kicad_sch.lck
+*.zip
+*.bak
+
+# gitignore template for LTspice
+# website: https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html
+
+# Logfile
+*.log
+
+# Simulation Outputs
+*.qraw # QSPICE
+*.raw
+*.fft
+*.plt
+
+# Netlist
+*.net
+
