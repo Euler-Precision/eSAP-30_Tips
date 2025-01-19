@@ -14,8 +14,8 @@
         "copper_text_thickness": 0.3,
         "copper_text_upright": false,
         "courtyard_line_width": 0.05,
-        "dimension_precision": 4,
-        "dimension_units": 3,
+        "dimension_precision": 2,
+        "dimension_units": 2,
         "dimensions": {
           "arrow_length": 1270000,
           "extension_offset": 500000,
@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.0,
-          "height": 1.02,
-          "width": 2.9
+          "drill": 0.762,
+          "height": 1.524,
+          "width": 1.524
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -48,10 +48,16 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.0
+          "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -92,7 +98,7 @@
         "shorting_items": "error",
         "silk_edge_clearance": "warning",
         "silk_over_copper": "warning",
-        "silk_overlap": "warning",
+        "silk_overlap": "ignore",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
         "starved_thermal": "error",
@@ -112,20 +118,20 @@
         "max_error": 0.005,
         "min_clearance": 0.2,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.1,
-        "min_hole_clearance": 0.25,
+        "min_copper_edge_clearance": 0.2,
+        "min_hole_clearance": 0.2,
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
         "min_resolved_spokes": 2,
         "min_silk_clearance": 0.0,
-        "min_text_height": 0.8,
+        "min_text_height": 0.75,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.0,
+        "min_track_width": 0.15,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
-        "solder_mask_to_copper_clearance": 0.005,
+        "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
@@ -171,7 +177,14 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.15,
+        0.2,
+        0.5,
+        1.0,
+        2.0
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -198,7 +211,16 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        },
+        {
+          "diameter": 0.5,
+          "drill": 0.3
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -416,7 +438,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "simulation_model_issue": "ignore",
@@ -431,7 +453,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "MMCX_FlexPCB_0603.kicad_pro",
+    "filename": "0100_COVERSHEET.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -466,14 +488,14 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "Outputs/Gerbers/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
       "svg": "",
       "vrml": ""
     },
-    "page_layout_descr_file": ""
+    "page_layout_descr_file": "DrawingBox/EP_A4_PCB_DrawingBox.kicad_wks"
   },
   "schematic": {
     "annotate_start_num": 0,
@@ -533,7 +555,7 @@
       "group_symbols": true,
       "name": "Grouped By Value",
       "sort_asc": true,
-      "sort_field": "Referência"
+      "sort_field": "Reference"
     },
     "connection_grid_size": 50.0,
     "drawing": {
@@ -563,8 +585,8 @@
       "version": 1
     },
     "net_format_name": "",
-    "page_layout_descr_file": "",
-    "plot_directory": "",
+    "page_layout_descr_file": "DrawingBox/EP_A4_SCH_DrawingBox.kicad_wks",
+    "plot_directory": "Outputs/Schematics_PDF/",
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
     "spice_model_current_sheet_as_root": true,
@@ -576,9 +598,26 @@
   },
   "sheets": [
     [
-      "ef456c1e-20a9-4671-be85-061144993984",
-      "Raiz"
+      "dfa3a691-da18-4036-9ad8-da062d2db1d2",
+      "Root"
     ]
   ],
-  "text_variables": {}
+  "text_variables": {
+    "ADDRESS1": "Dorfstrasse 27A",
+    "ADDRESS2": "Grabs 9472",
+    "ADDRESS3": "Switzerland",
+    "DRAWNBY": "Enrique Corpa",
+    "DRAWNBY2": "Fabio Posser",
+    "PROJECTID": "EP20240606-3",
+    "PROJECTSTATUS": "Prototype",
+    "PROJECTSTATUSDATE": "17.01.2025",
+    "PROJECTTITLE": "AP IC FPC Test Fixture 60 mm",
+    "RELEASEBY": "",
+    "RELEASEBY2": "",
+    "RELEASEDATE": "",
+    "REVIEWBY": "Fabio Posser",
+    "REVIEWBY2": "",
+    "REVIEWDATE": "",
+    "VARIANTNAME": "Standard"
+  }
 }
