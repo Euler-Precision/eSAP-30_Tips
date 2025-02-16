@@ -65,7 +65,6 @@
         "lib_footprint_mismatch|130150000|100250000|08b9cf05-9c17-496f-a9ee-bc018eaaf4ed|00000000-0000-0000-0000-000000000000",
         "silk_over_copper|219127820|184875579|d0c58d07-3b1a-4f1d-b4c5-98ff23730b34|00000000-0000-0000-0000-000000000000",
         "silk_over_copper|219342106|184875579|7882d058-70d9-4fd8-a2ed-cc19f4e78fc7|00000000-0000-0000-0000-000000000000",
-        "text_on_edge_cuts|212000000|186000000|d7c27819-aa5c-4a4e-8012-7afac46eabd4|00000000-0000-0000-0000-000000000000",
         "unconnected_items|132455000|98425000|ac496da1-0c8e-4345-af6f-a9641d035d9b|85a4647c-e555-405a-9912-afbe27a1d257"
       ],
       "meta": {
@@ -500,7 +499,7 @@
       "plot": "Outputs/Gerbers/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "Outputs/3D/FPC_Standard_60mm_CAD.step",
       "svg": "",
       "vrml": ""
     },
